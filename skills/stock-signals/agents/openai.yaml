@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stock Signals"
+  short_description: "Regime-aware S&P 500 buy-timing analysis"
+  default_prompt: "Use $stock-signals to judge whether the S&P 500 is a buy today with source-attributed regime scoring."
