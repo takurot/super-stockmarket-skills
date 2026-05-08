@@ -1,6 +1,6 @@
 # Super Stockmarket Skills
 
-A skill set for Gemini CLI designed to provide quantitative and objective investment decisions for the S&P 500 based on fresh market data and macroeconomic indicators.
+A skill set for AI coding assistants (Gemini CLI, Claude Code, OpenCode, etc.) designed to provide quantitative and objective investment decisions for the S&P 500 based on fresh market data and macroeconomic indicators.
 
 ## Overview
 
@@ -22,7 +22,7 @@ This project provides a **rigorous scoring framework** based on observed market 
 │   └── stock-signals.md      # System prompt defining the skill's behavior
 └── skills/
     └── stock-signals/
-        ├── SKILL.md          # Gemini CLI skill definition
+        ├── SKILL.md          # Skill definition (Gemini CLI / Claude Code)
         ├── agents/           # Agent configurations
         └── references/       # In-depth logic and reference documents
             ├── data-sources.md   # Recommended primary and fallback sources
@@ -32,22 +32,36 @@ This project provides a **rigorous scoring framework** based on observed market 
 
 ## Usage
 
-Register this skill with your Gemini CLI to start using it.
+This skill can be used with multiple AI coding assistants. Choose the appropriate method for your environment.
 
-### Installation
+### Gemini CLI
 
 ```bash
 # Register the skill (adjust the path as necessary for your environment)
 gemini skill add ./skills/stock-signals
 ```
 
-### Example Command
-
-Simply ask about the current market stance, and the agent will handle data collection and analysis.
-
 ```bash
 gemini ask "Is the S&P 500 a buy today?"
 ```
+
+### Claude Code
+
+Copy the skill to your Claude Code skills directory:
+
+```bash
+cp -r ./skills/stock-signals ~/.claude/skills/
+```
+
+Then invoke the skill in a Claude Code session:
+
+```
+/stock-signals Is the S&P 500 a buy today?
+```
+
+### OpenCode / Codex
+
+Place the skill in your workspace's `.opencode/skills/` directory or register it globally. Refer to your tool's documentation for skill registration.
 
 ## The Core Framework
 
